@@ -37,3 +37,5 @@ router.put('/:id', (req,res)=>{
         updatedTodo:todo
     });
 });
+
+module.exports = router;
