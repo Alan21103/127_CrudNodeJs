@@ -394,31 +394,40 @@ p a:hover {
   border-color: #0056b3;
 }
 
-.card-todo {
-  border: none;
+.card {
+  background: #fefefe;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-title {
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #007bff; /* Optional: Change border color on hover */
+}
+
+/* Title Styling Inside Card */
+.todo-card h5 {
   font-size: 1.2rem;
-  font-weight: 600;
-  color: #495057;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.btn {
-  margin-top: 5px;
+/* Optional: Add a hover effect to buttons inside the card */
+.todo-card .btn {
+  font-size: 0.9rem;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  border-color: #dc3545;
+.todo-card .btn:hover {
+  background-color: #007bff;
+  color: white;
 }
 
 /* Responsif untuk grid */
@@ -508,4 +517,27 @@ p a:hover {
   font-size: 1.1rem; /* Ukuran font tombol */
   padding: 10px 20px; /* Padding tombol */
 }
+
+/* Footer Styling */
+footer {
+  background-color: grey; /* Warna latar belakang footer */
+  padding: 20px 10px;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff; /* Warna teks */
+  font-style: italic;
+}
+
+footer p:hover {
+  color: #007bff; /* Warna teks saat hover */
+  text-decoration: underline; /* Efek garis bawah pada hover */
+  transition: color 0.3s ease;
+}
+
 
