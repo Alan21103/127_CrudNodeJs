@@ -1,14 +1,17 @@
 const express = require('express');
 const todoRoutes = require('./routes/tododb.js');
+const path = require('path');
 const app = express();
 require('dotenv').config();
 const port = process.env.PORT;
 
 // Pertemuan 7
+app.use(express.static(path.join(__dirname, 'public')));
 
 const session = require('express-session');
 const authRoutes = require('./routes/authRoutes');
 const { isAuthenticated } = require('./middlewares/middleware.js');
+
 
 
 const expressLayout = require('express-ejs-layouts');
